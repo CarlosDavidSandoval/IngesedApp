@@ -346,6 +346,9 @@ if (isset($_POST['procesar'])) {
                 cantidadesSolicitadas.push(cantidadSolicitada);
             }
         });
+
+        console.log('IDs:', ids);
+        console.log('Cantidades Solicitadas:', cantidadesSolicitadas);
          
         if (ids.length > 0) {
             document.querySelector('input[name="ids"]').value = JSON.stringify(ids);
@@ -353,7 +356,7 @@ if (isset($_POST['procesar'])) {
             var form = document.getElementById('miFormulario');
             alert('No se han editado cantidades o no son válidas.'+ form);
             
-            document.getElementById('miFormulario').form.submit();
+            document.getElementById('miFormulario').submit();
             
             } else {
                   alert('No se han editado cantidades o no son válidas.');
